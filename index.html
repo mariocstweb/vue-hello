@@ -19,8 +19,70 @@
       id="app"
       class="d-flex align-items-center justify-content-center flex-column"
     >
-      <h1 class="text-center mt-5 mb-3">{{message}}</h1>
+      <h1 class="text-center mt-5 mb-3">{{ message }}</h1>
       <img class="img-fluid" :src="img" alt="" />
+      <div class="container mt-5">
+        <h2 class="text-center">{{text}}</h2>
+        <div class="row row-cols-2">
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label"
+                >Nome</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Inserisci il nome"
+                v-model.trim="firstName"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlInput2" class="form-label"
+                >Cognome</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Inserisci il cognome"
+                v-model.trim="lastName"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlInput3" class="form-label"
+                >Email</label
+              >
+              <input
+                type="email"
+                class="form-control"
+                placeholder="Inserisci l'email"
+                v-model.trim="email"
+              />
+            </div>
+          </div>
+          <div class="col">
+            <div class="mb-3">
+              <label for="exampleFormControlInput4" class="form-label"
+                >Numero di Telefono</label
+              >
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Inserisci il numero di telefono"
+                v-model.trim="number"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="text-center">
+          <button class="btn btn-primary" @click="checkAndChangeText">
+            Iscriviti
+          </button>
+        </div>
+      </div>
     </div>
   </body>
 </html>
